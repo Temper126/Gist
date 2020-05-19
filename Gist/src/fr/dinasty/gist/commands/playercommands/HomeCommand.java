@@ -20,6 +20,7 @@ public class HomeCommand implements CommandExecutor {
         Profile profile = main.getProfilesManager().getProfile(sender.getName());
         if(args.length<1)
         {
+            //affiche la liste des homes
             if(profile.getHomes().size() == 1)
             {
                 Home home = null;
@@ -50,6 +51,7 @@ public class HomeCommand implements CommandExecutor {
         }
         else
         {
+            //Lance la tp si il a bien le home
             if(main.getProfilesManager().getProfile(sender.getName()).getHomes().containsKey(args[0]))
             {
                 tp((Player)sender, main.getProfilesManager().getProfile(sender.getName()).getHomes().get(args[0]));
@@ -60,6 +62,8 @@ public class HomeCommand implements CommandExecutor {
 
         return true;
     }
+
+    //Méthode pour la téléportation à un point
     public Boolean tp(Player player, Home home)
     {
         if(player.isOp())

@@ -23,8 +23,11 @@ public class SetWarpCommand implements CommandExecutor {
             sender.sendMessage("[Gist] Utilisation correct: /setwarp <name>");
             return false;
         }
+
         Player player = (Player)sender;
         warp = new Warp(args[0], player.getLocation());
+
+        //Verification si le warp existe deja
         for(int i =0; i<main.getWarpsManager().getWarps().size(); i++)
         {
             if(main.getWarpsManager().getWarps().get(i).getName().equalsIgnoreCase(warp.getName()))

@@ -14,7 +14,6 @@ public class MsgCommmand implements CommandExecutor {
     }
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
         if(args.length <2){
             sender.sendMessage("[Gist] Utilisation Correct: /m <Player> <Message>");
             return false;

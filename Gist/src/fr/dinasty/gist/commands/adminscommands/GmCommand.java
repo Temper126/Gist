@@ -29,6 +29,7 @@ public class GmCommand implements CommandExecutor {
 
         if(args.length > 1)
         {
+            //check si le joueur passé en parametre est valide + selection du bon argument
             player = Bukkit.getPlayer(args[0]);
             if(player == null)
             {
@@ -43,6 +44,7 @@ public class GmCommand implements CommandExecutor {
             mode = args[0];
         }
 
+        //Comparaison du mode de jeu demandé
         switch (mode)
         {
             case "0":

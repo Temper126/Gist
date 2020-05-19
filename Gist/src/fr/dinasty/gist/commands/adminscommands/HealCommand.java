@@ -18,6 +18,7 @@ public class HealCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
+        //Check si il y a un joueur visé por la commande
         if(args.length > 0)
         {
             player = Bukkit.getPlayer(args[0]);
@@ -32,6 +33,7 @@ public class HealCommand implements CommandExecutor {
             player = (Player)sender;
         }
 
+        //Refill des points de vie
         player.setHealth(20d);
         player.sendMessage("[Gist] Point de vie restaurés");
         return true;

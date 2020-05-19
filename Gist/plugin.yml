@@ -2,3 +2,34 @@ main: fr.dinasty.gist.Main
 author: Dinasty
 version: 1.0
 name: Gist
+commands:
+  fly:
+    description: Commande pour activer/désactiver le fly
+    permission: gist.fly
+  gm:
+    description: Commande pour changer notre mode de jeu
+    permission: gist.gm
+  heal:
+    description: Commande pour regener toute la vie
+    permission: gist.heal
+  setwarp:
+    description: Commande pour enregistrer un warp
+    permission: gist.setwarp
+  feed:
+    description: Commande pour regener toute la saturation
+    permission: gist.feed
+  home:
+    description: Commande pour se téléporter à un home
+    permission: gist.home
+  msg:
+    description: Commande pour envoyer un message privé
+    permission: gist.msg
+  r:
+    description: Commande pour répondre au dernier message privé
+    permission: gist.r
+  sethome:
+    description: Commande pour enregistrer un home
+    permission: gist.sethome
+  warp:
+    description: Commande pour se téléporter à un warp
+    permission: gist.warp

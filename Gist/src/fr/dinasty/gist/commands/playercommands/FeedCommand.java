@@ -14,10 +14,10 @@ public class FeedCommand implements CommandExecutor {
         this.main = main;
     }
 
-
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
     {
+        //Check si il y a un joueur visé por la commande
         if(args.length > 0)
         {
             player = Bukkit.getPlayer(args[0]);
@@ -31,7 +31,7 @@ public class FeedCommand implements CommandExecutor {
         {
             player = (Player)sender;
         }
-
+        //Nourriture resrtauré
         player.setFoodLevel(20);
         player.sendMessage("[Gist] Nourriture restaurée");
         return true;
